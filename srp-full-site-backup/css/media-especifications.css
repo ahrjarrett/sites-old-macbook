@@ -1,0 +1,192 @@
+/* #Media Specifications
+================================================== */
+
+/* Smaller than standard 1200 */
+@media only screen and (max-width: 1299px) {
+}
+
+/* Small Screen size to standard 1200 */
+@media only screen and (min-width: 1000px) and (max-width: 1299px) {
+	.logo {
+		padding: 10px;
+		width: 220px;
+	}
+	nav {
+		width: -webkit-calc(100% - 255px);
+		width: -moz-calc(100% - 255px);
+		width: calc(100% - 255px);
+		padding: 0 5px 0 10px;
+	}
+	nav ul li a,
+	nav ul li a:visited {
+		padding: 10px 5px;
+		font-size: 12px;
+	}
+	.phone h1 {
+		font: 300 20px/29px 'Lato', sans-serif;
+	}
+	.phone h2 {
+		font: 300 18px/24px 'Lato', sans-serif;
+	}
+	.phone {
+		padding-right: 10px;
+	}
+}
+
+/* Smaller than standard 960 */
+@media only screen and (max-width: 999px) {
+}
+
+/* Tablet Portrait size to standard 960 */
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+	body {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.logo {
+		padding: 10px;
+		width: 150px;
+	}
+	nav {
+		width: -webkit-calc(100% - 185px);
+		width: -moz-calc(100% - 185px);
+		width: calc(100% - 185px);
+		padding: 0 5px 0 10px;
+	}
+	nav ul li a,
+	nav ul li a:visited {
+		padding: 10px 5px 0;
+		font-size: 10px;
+	}
+	.phone h1 {
+		font: 300 18px/27px 'Lato', sans-serif;
+	}
+	.phone h2 {
+		font: 300 16px/22px 'Lato', sans-serif;
+	}
+	.phone {
+		padding-right: 10px;
+	}
+	h1 {
+		font: normal 20px/35px 'Arimo', serif;
+	}
+}
+
+/* Tablet Portrait size to standard 1200 */
+@media only screen and (min-width: 768px) and (max-width: 1299px) {
+}
+
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px) {
+	body.internal,
+	.internal .wrapper,
+	.internal #MainContainer,
+	.internal #MainContainer .wrap,
+	.internal #MainContainer .container,
+	.internal #MainContainer .right,
+	.internal #MainContainer .background {
+		height: auto;
+	}
+	.logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(51,51,51,0.5); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(51,51,51,0))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* W3C */
+		z-index: 10000;
+		padding: 0 0 30px;
+	}
+	header {
+		background: none;
+		position: relative;
+		padding: 0;
+	}
+	.logo a {
+		float: left;
+		width: 200px;
+		left: 50%;
+		margin-left: -210px;
+		position: relative;
+		padding: 5px 0;
+	}
+	.logo a img {
+		height: 50px;
+	}
+	nav {
+		display: none;
+		position: absolute;
+		width: 420px;
+		left: 50%;
+		margin-left: -210px;
+		background: rgba(51, 51, 51, 0.8);
+		-webkit-box-shadow: 0 0 4px #000;
+		-moz-box-shadow: 0 0 4px #000;
+		box-shadow: 0 0 4px #000;
+		padding: 60px 0 0;
+		z-index: 9999;
+	}
+	nav ul li {
+		display: block;
+		width: 100%;
+		text-align: right;
+		border-top: 1px solid #FFF;
+	}
+	nav ul ul {
+		display: block;
+		position: relative;
+		width: 100%;
+		background: rgba(102, 102, 102, 0.8);
+	}
+	nav ul li:hover ul {
+		display: none;
+	}
+	#NavigationTrigger {
+		float: right;
+		width: 60px;
+		height: 60px;
+		background: url(../images/nav.png) right no-repeat;
+		right: 50%;
+		margin-right: -210px;
+		display: block;
+		text-indent: -9999px;
+		position: relative;
+	}
+	.phone {
+		text-align: center;
+		float: none;
+		width: 100%;
+		position: absolute;
+		padding: 80px 0 0;		
+	}
+	.content {
+		padding: 150px 20px 140px;
+	}
+	#TenSteps {
+		position: absolute;
+	}
+	
+}
+
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size  */
+@media only screen and (max-width: 479px) {
+	.logo a {
+		margin-left: -150px;
+	}
+	#NavigationTrigger {
+		margin-right: -150px;
+	}
+	nav {
+		width: 300px;
+		margin-left: -150px;
+	}
+}

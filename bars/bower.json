@@ -1,0 +1,22 @@
+{
+  "name": "bars",
+  "description": "",
+  "main": "",
+  "authors": [
+    "andrew jarrett"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "v3.0.3",
+    "jquery": "^2.2.3",
+    "material-design-lite": "^1.1.3"
+  }
+}

@@ -1,0 +1,472 @@
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0 auto;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: middle; }
+	iframe {
+		max-width: 100%;
+		vertical-align: middle; }
+	ol, ul, li {
+		padding-left: 10px;
+		margin-left: 10px; }
+	ul {
+		list-style: disc; }
+	ol {
+		list-style: decimal; }
+	hr {
+		height: 20px;
+		margin: 0 0 20px;
+		clear: both;
+		border: 1px solid #CCC;
+		border-width: 0 0 1px;
+	}
+	a,
+	a:visited {
+		color:#B2EDF1;
+	}
+	a:hover {
+		color:#6B8F9C;
+	}
+
+
+/* #Basic Styles
+================================================== */
+body {
+	background: #333 url(../images/slideshow/01.jpg) center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font: 15px/22px 'Arimo', sans-serif;
+	color: #FFF;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+.wrapper {
+	position: relative;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(51,51,51,0.5); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(51,51,51,1) 0%, rgba(51,51,51,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,51,51,1)), color-stop(100%,rgba(51,51,51,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(51,51,51,0) 100%); /* W3C */
+	padding-bottom: 30px;
+	z-index: 10000;
+}
+.logo {
+	float: left;
+	width: 260px;
+	text-align: center;
+	padding: 10px 20px;
+}
+#NavigationTrigger {
+	display: none;
+}
+nav {
+	float: right;
+	width: -webkit-calc(100% - 330px);
+	width: -moz-calc(100% - 330px);
+	width: calc(100% - 330px);
+	padding: 0px 10px 0 20px;
+}
+.phone {
+	float: right;
+	clear: right;
+	text-align: right;
+	padding: 0 20px 0 0;
+}
+#TenSteps {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	padding: 20px 30px;
+	z-index: 10000;
+}
+#TenSteps .background {
+	background: rgba(51, 51, 51, 0.7);
+	padding: 10px;
+	position: relative;
+}
+#TenSteps .background:after {
+	background: url(../images/cover-perfect-pool.png) right bottom no-repeat;
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -10px;
+	right: -15px;
+	width: 106px;
+	height: 130px;
+}
+#TenSteps a,
+#TenSteps a:visited {
+	text-decoration: none;
+	display: block;
+	padding-right: 70px;
+}
+
+#FooterLogos {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 20px 30px;
+	z-index: 10000;
+}
+#FooterLogos img {
+	border: 1px solid #999;
+	margin-right: 10px;
+	padding: 5px;
+	background: #fff;
+}
+
+html, body {
+	height: 100%;
+}
+#MainContainer .background {
+	background: rgba(51, 51, 51, 0.8);
+	-webkit-box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	box-shadow: 0 0 4px #000;
+}
+.content {
+	padding: 120px 40px 140px;
+}
+
+
+
+/* #Fonts
+================================================== */
+h1 {
+	font: normal 25px/30px 'Arimo', serif;
+	color: #FFF;
+}
+.phone h1 {
+	font: 300 22px/30px 'Lato', sans-serif;
+}
+h2 {
+	font: normal 22px/27px 'Arimo', serif;
+	color: #FFF;
+}
+.phone h2 {
+	font: 300 20px/25px 'Lato', sans-serif;
+}
+#TenSteps h2 {
+	font: normal 13px/16px 'Lato', sans-serif;
+}
+h3 {
+	font: normal 19px/21px 'Arimo', serif;
+	color: #FFF;
+}
+h4 {
+	font: bold 13px/21px 'Arimo', serif;
+	text-transform: uppercase;
+	color: #FFF;
+}
+h5 {
+	font: bold 15px/21px 'Arimo', serif;
+	color: #FFF;
+}
+h6 {
+	font: bold 16px/21px 'Arimo', serif;
+	color: #FFF;
+}
+#TenSteps p {
+	background: rgb(253,152,3); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(253,152,3,1) 0%, rgba(226,137,44,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(253,152,3,1)), color-stop(100%,rgba(226,137,44,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(253,152,3,1) 0%,rgba(226,137,44,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(253,152,3,1) 0%,rgba(226,137,44,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(253,152,3,1) 0%,rgba(226,137,44,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(253,152,3,1) 0%,rgba(226,137,44,1) 100%); /* W3C */
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	color: #FFF;
+	font: normal 15px/24px 'Roboto Condensed', sans-serif;
+	font-style: italic;
+	padding: 1px 10px 3px;
+	margin-top: 5px;
+	position: relative;
+}
+#TenSteps p:after {
+	background: url(../images/icon-download.png) center no-repeat;
+	height: 15px;
+	padding: 15px;
+	content: '';
+	display: inline;
+}
+
+div.content.faq > h3 {
+	cursor:pointer;
+}
+.faqAnswer {
+	display:none;
+}
+
+.highslide-container h1 {
+	color: #555;
+}
+
+/* #Navigation
+================================================== */
+nav ul {
+	float: right;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+nav ul li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+	position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+	font: 300 13px/25px 'Lato', sans-serif;
+	color: #FFF;
+	padding: 10px;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+}
+nav ul li a:hover:before,
+nav ul li a:active:before,
+nav ul li a.selected:before,
+nav ul li:hover > a:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 8px solid #FFF;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	margin-left: -8px;
+}
+nav ul ul {
+	display: none;
+	position: absolute;
+	background: rgba(51, 51, 51, 0.8);
+	-webkit-box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	box-shadow: 0 0 4px #000;
+	width: 200px;
+}
+nav ul ul li {
+	width: 100%;
+}
+nav ul ul li a,
+nav ul ul li a:visited {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+}
+nav ul ul li a:hover,
+nav ul ul li a:active {
+	background: #FFF;
+	color: #333;
+}
+nav ul ul li a:hover:before,
+nav ul ul li a:active:before,
+nav ul ul li a.selected:before,
+nav ul ul li > a:before {
+	display: none;
+}
+nav ul li:hover ul {
+	display: block;
+}
+
+
+/* #Lists
+================================================== */
+ul.formList {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ul.formList li {
+	padding: 3px 0;
+	margin: 0;
+	list-style: none;
+	float: left;
+}
+ul.formList li.label {
+	width: -webkit-calc(40% - 5px);
+	width: -moz-calc(40% - 5px);
+	width: calc(40% - 5px);
+}
+ul.formList li.field {
+	width: 60%;
+}
+ul.formList li.labelField {
+	width: 100%;
+}
+ul.formList li.button,
+ul.formList li.noLabel {
+	width: 60%;
+	margin-left: 40%;
+}
+
+
+/* #Forms
+================================================== */
+.field input,
+.field select,
+.field textarea {
+	padding: 4px;
+	border: 1px solid #CCC;
+	background: #FFF;
+	height: 16px;
+	width: -webkit-calc(100% - 10px);
+	width: -moz-calc(100% - 10px);
+	width: calc(100% - 10px);
+	font: 13px/16px Arial, Helvetica, sans-serif;
+	color: #333;
+}
+.field select {
+	width: 100%;
+	height: 26px;
+}
+.field textarea {
+	height: 80px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+	border-color: #FF9900;
+}
+.field input[type="radio"],
+.field input[type="checkbox"] {
+	width: auto;
+}
+.button input {
+	font: bold 11px/18px Arial, Helvetica, sans-serif;
+	color: #FFF;
+	background: #333;
+	border: none;
+	padding: 5px 15px;
+	height: 25px;
+}
+.button input:hover {
+	background: #FF9900;
+}
+form {
+	max-width: 500px;
+}
+
+
+/* #Images
+================================================== */
+.imgCenter,
+.imgRight,
+.imgLeft {
+	padding: 4px;
+	border: 1px solid #CCC;
+	margin: 10px auto;
+	display: block;
+}
+.imgCenter {
+	max-width: -webkit-calc(100% - 10px);
+	max-width: -moz-calc(100% - 10px);
+	max-width: calc(100% - 10px);
+}
+.imgLeft {
+	float: left;
+	max-width: 40%;
+	margin: 10px 15px 10px 0;
+}
+.imgRight {
+	float: right;
+	max-width: 40%;
+	margin: 10px 0 10px 15px;
+}
+
+ul.gallery-02,
+ul.gallery-04,
+ul.gallery-05 {
+	padding: 0;
+	margin: -30px 0 0 -30px;
+	list-style: none;
+}
+ul.gallery-02 li {
+	padding: 0;
+	margin: 30px 0 0 30px;
+	list-style: none;
+	float: left;
+	width: -webkit-calc(50% - 30px);
+	width: -moz-calc(50% - 30px);
+	width: calc(50% - 30px);
+	text-align: center;
+}
+ul.gallery-02 li a {
+	text-decoration:none;
+}
+ul.gallery-04 li {
+	padding: 0;
+	margin: 30px 0 0 30px;
+	list-style: none;
+	float: left;
+	width: -webkit-calc(25% - 30px);
+	width: -moz-calc(25% - 30px);
+	width: calc(25% - 30px);
+	text-align: center;
+}
+ul.gallery-05 li {
+	padding: 0;
+	margin: 30px 0 0 30px;
+	list-style: none;
+	float: left;
+	width: -webkit-calc(20% - 30px);
+	width: -moz-calc(20% - 30px);
+	width: calc(20% - 30px);
+	text-align: center;
+}
+
+
+
+/* #Scripts
+================================================== */
+.no_js { 
+	display: block;
+}
+.has_js { 
+	display: none;
+}
+.js .no_js { 
+	display: none;
+}
+.js .has_js {
+	display: block;
+}

@@ -1,0 +1,29 @@
+#landingMain.landingBG
+	.mainImg(style='background: url(/images/#{cta.bg}); background-size: cover; background-position: center center;')
+		.trapezoid-wrapper
+			h1.trapezoid
+				| #{cta.header}
+		.landing-overlay
+			.overlay-content
+				.overlay-form
+					.overlay-title
+						h1
+							| #{cta.subheader}
+						p
+							| ENTER YOUR DETAILS TO RECEIVE YOUR FREE INFORMATION
+						form.landing-form
+							input#landing-name(type='text', placeholder='Your Name', required='')
+							input#landing-zip(type='text', placeholder='Zip Code', required='')
+							input#landing-email(type='email', placeholder='Email Address', required='')
+							button.landing-button.btn-accent Continue
+				.landing-contact-us
+					p.questions Have a question?
+					.contact-us-btn
+						button.contact-btn.btn-accent(href='#') Call us
+					p.alt-question 8am - 5pm, Mon - Fri
+	.landing-details
+		.sub-detail
+			| More Options:
+			each val, index in cta.links
+				a(href='#{val}') #{index}
+

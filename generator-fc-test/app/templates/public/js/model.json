@@ -1,0 +1,26 @@
+{
+  'sales': {
+    'hero': 'main01.jpg',
+    'header': 'SalesOps.',
+    'bannerA': 'Download the Checklist &nbsp;&rarr;',
+    'bannerB': '10 Tips for a Perfect Sale'
+  },
+  'dev': {
+    'hero': 'main02.jpg',
+    'header': 'DevOps.',
+    'bannerA': 'Download the Checklist &nbsp;&rarr;',
+    'bannerB': '11 Tricks for a Smooth Deploy(ment)'
+  },
+  'builds': {
+    'hero': 'main03.jpg',
+    'header': 'Good Builds.',
+    'bannerA': 'Download the Checklist &nbsp;&rarr;',
+    'bannerB': 'The 12 Secrets of Architecture'
+  },
+  'sexy': {
+    'hero': 'main04.jpg',
+    'header': 'Sexy Product.',
+    'bannerA': 'Download the Checklist &nbsp;&rarr;',
+    'bannerB': '13 Hacks for a Summer Bod'
+  }
+}

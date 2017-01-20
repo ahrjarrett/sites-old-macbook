@@ -1,0 +1,31 @@
+#nav.nav.sticky
+  #nav-top.nav-flex(role='navigation')
+    .nav-logo-wrapper
+      #logo.nav-logo-top
+        a.logo(href='#', style='margin-bottom:-50px')
+          img(src='images/logo.png')
+    .nav-ghost-wrapper
+    .nav-map-wrapper.sm-hide
+      ul.nav-map-ul
+        
+        each val, index in nav
+          li.nav-map-li
+            a.smoothScroll(href='/#{val}') #{index}
+
+    .nav-social-wrapper.sm-hide
+      .nav-social-top
+          each val, index in social
+            a(href='#{index}')
+              i(class="fa fa-#{val}")
+    .nav-sm-only
+      a
+        button.mobile-menu(type='button')
+          span.hidden Menu
+  .clearfix
+  #nav-mobile.nav-sm-only.collapsed
+    ul.nav-mobile-ul
+
+      each val, index in nav
+        a(href='/#{val}')
+          li.nav-mobile-li #{index}
+

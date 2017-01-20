@@ -1,0 +1,31 @@
+.hero-banner-wrapper
+	#hero.hero.ct(style='background: url(images/#{home.init}); background-size: cover; background-position: center center;')
+		.hero-cta
+			.hero-cta-h1
+				h1#hero-header #{home.sales.header}
+			.hero-cta-ul
+				ul#hero-ul
+					each val, i in buttons
+						case i
+							when 0
+								a(id='hero#{i}' class='active' href='#')
+									li #{val}
+							default
+								a(id='hero#{i}' href='#')
+									li #{val}
+			.hero-cta-btn
+				form
+					input(placeholder='Enter your email...')
+				.hero-cta-btn-submit
+					button.btn-main(type='submit') Submit 
+	#banner.banner
+		.banner-wrapper
+			a(href='#open-modal')
+				img(src='images/icon02.png')
+			p.flex-1
+				span#banner-a.bold.hidden-on-mobile
+					| #{home.sales.bannerA} →
+				span#banner-b.bold
+					| #{home.sales.bannerB}
+			a(href='#open-modal', style='color:white')
+				button.btn.btn-main #{home.sales.btntext}

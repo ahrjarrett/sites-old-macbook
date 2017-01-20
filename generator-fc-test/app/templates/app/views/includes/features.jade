@@ -1,0 +1,14 @@
+#featuredDiv
+	section#featured-categories
+		each val in features.rowone
+			.featured-category(style='background-image: url(images/#{val[1]}')
+				a(class='fa fa-#{val[2]} lightbox' href='images/#{val[1]}', rel='group')
+					h2 #{val[0]}
+	section#featured-posts
+		each val in features.rowtwo
+			.featured-post(style='background-image: url(images/#{val[1]}')
+				a(href='images/#{val[1]}', class='lightbox' rel='group')
+					h2.meta-type.story-type #{val[0]} 
+					.post-meta
+						span Click for More Info 
+	.clearfix

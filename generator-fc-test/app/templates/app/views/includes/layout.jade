@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width')
+		title= title
+		block css
+			link(rel='stylesheet', href='/lib/bootstrap/css/bootstrap.css')
+			link(rel='stylesheet', href='/lib/font-awesome/font-awesome.min.css')
+			link(rel='stylesheet', href='/lib/fancybox/jquery.fancybox.css?v=2.1.5')
+			link(rel='stylesheet', href='/css/main.css')
+		block js
+			script(src='/lib/jquery/jquery-1.12.3.js')
+			script(src='/lib/bootstrap/js/bootstrap.js')
+			script(src='/lib/fancybox/jquery.fancybox.pack.js?v=2.1.5')
+			script(src='/js/bundle.js')
+			if ENV_DEVELOPMENT
+				script(src='http://localhost:35729/livereload.js')
+	
